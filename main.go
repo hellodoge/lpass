@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"flag"
 	"github.com/hellodoge/lpass/lib"
+	"crypto/sha256"
+	"golang.org/x/crypto/pbkdf2"
 )
 
 const (
@@ -18,8 +20,8 @@ var uA, ua, u0, u_ bool
 
 func main() {
 	var chars string = lib.GetChars(uA, ua, u0, u_)
-	var generated []byte = lib.Generate(
-		[]byte(masterKey), []byte(token), iter, length)
+	var generated []byte = pbkdf2.Key(
+		[]byte(masterKey), []byte(token), iter, length, sha256.New)
 	var pass string = lib.Translate(generated, chars)
 	fmt.Println(pass)
 }
