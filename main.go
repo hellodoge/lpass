@@ -34,7 +34,7 @@ func init() {
 	flag.IntVar(&iter, "i", default_iter, "iteration count")
 
 	flag.Usage = func() {
-		fmt.Println("Usage: pass [master key] [token or url] [args]")
+		fmt.Println("Usage: lpass [master key] [token or url] [args]")
 		flag.PrintDefaults()
 	}
 
