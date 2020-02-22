@@ -11,7 +11,7 @@ import (
 
 const (
 	default_length = 15
-	default_iter = 0x1000
+	default_iter = 0x10000
 )
 
 var masterKey, token string
