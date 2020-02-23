@@ -12,16 +12,16 @@ const (
 func GetChars(uA, ua, u0, u_ bool) string {
 	var chars strings.Builder
 
-	if !uA {
+	if uA {
 		chars.WriteString(uppercase)
 	}
-	if !ua {
+	if ua {
 		chars.WriteString(lowercase)
 	}
-	if !u0 {
+	if u0 {
 		chars.WriteString(numbers)
 	}
-	if !u_ {
+	if u_ {
 		chars.WriteString(special)
 	}
 
