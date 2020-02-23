@@ -20,6 +20,10 @@ var uA, ua, u0, u_ bool
 
 func main() {
 	var chars string = lib.GetChars(!uA, !ua, !u0, !u_)
+	if len(chars) == 0 {
+		fmt.Println("Unable to generate password")
+		os.Exit(1)
+	}
 	var generated []byte = pbkdf2.Key(
 		[]byte(masterKey), []byte(token), iter, length, sha256.New)
 	var pass string = lib.Translate(generated, chars)
