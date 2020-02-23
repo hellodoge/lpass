@@ -18,7 +18,7 @@ Usage: lpass [master key] [token or url] [args]
   -_	do not use special characters
   -a	do not use lowercase characters
   -i int
-    	iteration count (default 4096)
+    	iteration count (default 65536)
   -l int
     	password length (default 15)
 ```
