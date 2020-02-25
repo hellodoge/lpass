@@ -6,8 +6,7 @@ You need to have Go 1.10 or newer on your machine.
 ```
 go get -u github.com/hellodoge/lpass
 go get -u golang.org/x/crypto/pbkdf2
-cd $HOME/go/src/github.com/hellodoge/lpass
-go install
+go install github.com/hellodoge/lpass
 ```
 
 ## Usage
